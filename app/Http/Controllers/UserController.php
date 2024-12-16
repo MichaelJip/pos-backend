@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class UserCotroller extends Controller
+class UserController extends Controller
 {
     //index
     public function index(Request $request)
