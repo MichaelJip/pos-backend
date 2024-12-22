@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Discount;
+use Illuminate\Http\Request;
 
 class DiscountController extends Controller
 {
@@ -13,6 +14,24 @@ class DiscountController extends Controller
         $discounts = \App\Models\Discount::all();
 
         return response()->json([
+            'status' => 'Success',
+            'data' => $discounts,
+        ], 200);
+    }
+
+    //store
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'description' => 'nullable',
+            'value' => 'required',
+        ]);
+
+        //create discount
+        $discounts = \App\Models\Discount::create($request->id);
+
+        return response()->json()([
             'status' => 'Success',
             'data' => $discounts,
         ], 200);
