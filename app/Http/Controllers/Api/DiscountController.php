@@ -28,7 +28,7 @@ class DiscountController extends Controller
         ]);
 
         //create discount
-        $discounts = \App\Models\Discount::create($request->id);
+        $discounts = \App\Models\Discount::create($request->all());
 
         return response()->json()([
             'status' => 'Success',
