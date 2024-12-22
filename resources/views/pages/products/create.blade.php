@@ -67,7 +67,7 @@
                                     class="form-control @error('price')
                                 is-invalid
                             @enderror"
-                                    name="price">
+                                    step="0.01" min="0" name="price">
                                 @error('price')
                                     <div class="invalid-feedback">
                                         {{ $message }}
