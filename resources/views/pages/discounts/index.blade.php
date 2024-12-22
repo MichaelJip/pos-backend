@@ -67,6 +67,7 @@
 
                                             <th>Name</th>
                                             <th>Description</th>
+                                            <th>Value</th>
                                             <th>Created At</th>
                                             <th>Action</th>
                                         </tr>
@@ -77,6 +78,9 @@
                                                 </td>
                                                 <td>
                                                     {{ $discount->description }}
+                                                </td>
+                                                <td>
+                                                    {{ $discount->value }}
                                                 </td>
                                                 <td>{{ $discount->created_at }}</td>
                                                 <td>
