@@ -28,11 +28,11 @@ class DiscountController extends Controller
         ]);
 
         //create discount
-        $discounts = \App\Models\Discount::create($request->all());
+        $discount = \App\Models\Discount::create($request->all());
 
         return response()->json()([
             'status' => 'Success',
-            'data' => $discounts,
-        ], 200);
+            'data' => $discount,
+        ], 201);
     }
 }
