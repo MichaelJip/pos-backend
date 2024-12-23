@@ -81,7 +81,7 @@
                                                     {{ $product->category->name }}
                                                 </td>
                                                 <td>
-                                                    {{ number_format($product->price, 0, '.', '') }}
+                                                    {{ number_format($product->price, 0, ',', '.') }}
                                                 </td>
                                                 <td>{{ $product->status == 1 ? 'Active' : 'Inactive' }}</td>
                                                 <td>{{ $product->created_at }}</td>
