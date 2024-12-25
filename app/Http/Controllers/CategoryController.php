@@ -26,7 +26,7 @@ class CategoryController extends Controller
         $request->validate([
             'name' => 'required',
             'description' => 'nullable',
-            // 'image' => 'required|image|mimes:jpeg,png,jpg,svg|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,svg|max:2048',
         ]);
 
         //jika image validasi di atas kg required tambah $category->save()

@@ -35,7 +35,7 @@ class ProductController extends Controller
             'status' => 'required|boolean',
             'is_favorite' => 'required|boolean',
             'category_id' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,svg|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,svg|max:2048',
         ]);
 
 
