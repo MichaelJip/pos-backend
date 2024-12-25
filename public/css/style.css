@@ -3093,6 +3093,20 @@ body.sidebar-mini .main-sidebar:after {
     opacity: 1;
   }
 }
+
+.sidebar-brand-img img {
+    display: block; /* Ensures proper spacing */
+    max-width: 100%; /* Prevents the image from exceeding the container width */
+    height: auto; /* Maintains aspect ratio */
+    margin: 0 auto; /* Centers the image */
+}
+
+.sidebar-brand-sm-img img {
+    display: block;
+    max-width: 50px; /* Ensures a fixed size for smaller screens */
+    height: auto;
+    margin: 0 auto;
+}
 body.sidebar-mini .main-sidebar .sidebar-brand {
   display: none;
 }

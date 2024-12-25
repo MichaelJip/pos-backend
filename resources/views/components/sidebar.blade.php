@@ -1,11 +1,15 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
-        <div class="sidebar-brand">
-            <a href="index.html">PMMJM POS</a>
+        <div class="sidebar-brand-img">
+            <img src="{{ asset('img/MJS.png') }}" alt="logo" width="100" class="shadow-light rounded-circle">
+            {{-- <a href="index.html">MJ Salon</a> --}}
         </div>
-        <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">St</a>
-        </div>
+        {{-- <div class="sidebar-brand-sm-img">
+            <img src="{{ asset('img/MJS.png') }}"
+            alt="logo"
+            width="50"
+            class="shadow-light rounded-circle">
+        </div> --}}
         <ul class="sidebar-menu">
             <li class=''>
                 <a class="nav-link" href="{{ route('home') }}">Dashboard</a>
