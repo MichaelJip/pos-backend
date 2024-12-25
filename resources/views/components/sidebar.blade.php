@@ -10,22 +10,30 @@
             width="50"
             class="shadow-light rounded-circle">
         </div> --}}
-        <ul class="sidebar-menu">
-            <li class=''>
-                <a class="nav-link" href="{{ route('home') }}">Dashboard</a>
-            </li>
-            <li class=''>
-                <a class="nav-link" href="{{ route('users.index') }}">Users</a>
-            </li>
-            <li class=''>
-                <a class="nav-link" href="{{ route('products.index') }}">Products</a>
-            </li>
-            <li class=''>
-                <a class="nav-link" href="{{ route('categories.index') }}">Categories</a>
-            </li>
-            <li class=''>
-                <a class="nav-link" href="{{ route('discounts.index') }}">Discount</a>
-            </li>
+        @if (auth()->user()->role === 'user')
+            <ul class="sidebar-menu">
+                <li class=''>
+                    <a class="nav-link" href="{{ route('home') }}">Dashboard</a>
+                </li>
+            </ul>
+        @else
+            <ul class="sidebar-menu">
+                <li class=''>
+                    <a class="nav-link" href="{{ route('home') }}">Dashboard</a>
+                </li>
+                <li class=''>
+                    <a class="nav-link" href="{{ route('users.index') }}">Users</a>
+                </li>
+                <li class=''>
+                    <a class="nav-link" href="{{ route('products.index') }}">Products</a>
+                </li>
+                <li class=''>
+                    <a class="nav-link" href="{{ route('categories.index') }}">Categories</a>
+                </li>
+                <li class=''>
+                    <a class="nav-link" href="{{ route('discounts.index') }}">Discount</a>
+                </li>
+            </ul>
+        @endif
 
-        </ul>
 </div>

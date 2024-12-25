@@ -15,51 +15,95 @@
                 <h1>Dashboard</h1>
             </div>
             <div class="section-body">
-                <div class="row">
-                    <!-- Card for Users -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Users</h5>
-                                <p class="card-text">Manage users and their information.</p>
-                                <a href="{{ route('users.index') }}" class="btn btn-primary">View Users</a>
+                @if (auth()->user()->role === 'user')
+                    <div class="row">
+                        <!-- Card for Users -->
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Users</h5>
+                                    <p class="card-text">Manage users and their information.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Card for Products -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Products</h5>
-                                <p class="card-text">Manage all products in the system.</p>
-                                <a href="{{ route('products.index') }}" class="btn btn-primary">View Products</a>
+                        <!-- Card for Products -->
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Products</h5>
+                                    <p class="card-text">Manage all products in the system.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Card for Categories -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Categories</h5>
-                                <p class="card-text">Organize products by categories.</p>
-                                <a href="{{ route('categories.index') }}" class="btn btn-primary">View Categories</a>
+                        <!-- Card for Categories -->
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Categories</h5>
+                                    <p class="card-text">Organize products by categories.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Card for Discounts -->
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Discounts</h5>
-                                <p class="card-text">Manage discount offers and promotions.</p>
-                                <a href="{{ route('discounts.index') }}" class="btn btn-primary">View Discounts</a>
+                        <!-- Card for Discounts -->
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Discounts</h5>
+                                    <p class="card-text">Manage discount offers and promotions.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @else
+                    <div class="row">
+                        <!-- Card for Users -->
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Users</h5>
+                                    <p class="card-text">Manage users and their information.</p>
+                                    <a href="{{ route('users.index') }}" class="btn btn-primary">View Users</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card for Products -->
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Products</h5>
+                                    <p class="card-text">Manage all products in the system.</p>
+                                    <a href="{{ route('products.index') }}" class="btn btn-primary">View Products</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card for Categories -->
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Categories</h5>
+                                    <p class="card-text">Organize products by categories.</p>
+                                    <a href="{{ route('categories.index') }}" class="btn btn-primary">View Categories</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card for Discounts -->
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Discounts</h5>
+                                    <p class="card-text">Manage discount offers and promotions.</p>
+                                    <a href="{{ route('discounts.index') }}" class="btn btn-primary">View Discounts</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
         </section>
     </div>
 @endsection
